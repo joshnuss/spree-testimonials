@@ -1,0 +1,43 @@
+<div class='toolbar'>
+    <ul class='actions'>
+      <li id="new_testimonial_link">
+        <%= button_link_to t("new_testimonial"), 
+                         new_object_url, 
+                         {:remote => :true, :icon => 'add' } %>
+      </li> 
+    </ul>
+  <br class='clear' />
+</div>
+<div id="new_testimonial"></div>
+
+<h1><%= t("testimonials") %></h1>
+<table class="index">
+  <thead>
+    <%= hook :admin_testimonials_index_headers do %>
+      <th><%= t("name") %></td>
+      <th><%= t("description") %></td>
+      <th><%= t("location") %></td>
+    <% end %>
+    <th>
+      <%= hook :admin_testimonials_header_actions %>
+    </th>
+  </tr>
+  <thead>
+<% @testimonials.each do |testimonial| %>
+  <tr id="<%= dom_id testimonial %>"> 
+    <%- locals = {:testimonial => testimonial} %>
+    <%= hook :admin_testimonials_index_rows, locals do %>
+      <td><%= testimonial.name %></td>
+      <td><%= simple_format testimonial.description %></td>
+      <td><%= testimonial.location %></td>
+    <% end %>
+    <td class="actions">
+      <%= hook :admin_testimonials_index_row_actions, locals do %>
+        <%= link_to_edit testimonial %>&nbsp;
+        <%= link_to_delete testimonial %>
+      <% end %>
+    </td>
+  </tr>
+<% end %> 
+  </tbody>
+</table>
