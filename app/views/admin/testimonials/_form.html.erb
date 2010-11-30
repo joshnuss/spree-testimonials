@@ -22,4 +22,9 @@
     <%= f.error_message_on :description %>
   <% end %>
 
+  <%= f.field_container :featured do %>
+    <%= f.check_box :featured  %>  
+    <%= f.label :featured, t("featured") %>
+    <%= f.error_message_on :featured %>
+  <% end %>
 <% end %>

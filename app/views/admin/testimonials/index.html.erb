@@ -17,6 +17,7 @@
       <th><%= t("name") %></td>
       <th><%= t("description") %></td>
       <th><%= t("location") %></td>
+      <th><%= t("featured") %></td>
     <% end %>
     <th>
       <%= hook :admin_testimonials_header_actions %>
@@ -30,6 +31,7 @@
       <td><%= testimonial.name %></td>
       <td><%= simple_format testimonial.description %></td>
       <td><%= testimonial.location %></td>
+      <td><%= "featured" if testimonial.featured %></td>
     <% end %>
     <td class="actions">
       <%= hook :admin_testimonials_index_row_actions, locals do %>
