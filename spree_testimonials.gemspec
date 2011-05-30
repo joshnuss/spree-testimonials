@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_testimonials'
-  s.version     = '3.0.2'
+  s.version     = '3.0.3'
   s.summary     = 'Adds the ability to manage testimonials to a spree site'
   s.description = 'With this gem you get management tools to make it very easy to update your testimonials thru the admin section'
   s.required_ruby_version = '>= 1.8.7'
@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.homepage          = 'http://spreecommerce.com'
   s.rubyforge_project = 'spree_testimonials'
 
-  s.files        = Dir['README.md', 'lib/**/*', 'app/**/*', 'config/*', 'db/*']
+  s.files        = Dir['README.md', 'lib/**/*', 'app/**/*', 'config/*', 'config/locales/*', 'db/*']
   s.require_path = 'lib'
   s.requirements << 'none'
 

@@ -1,0 +1,12 @@
+<% @body_id = 'testimonials' %>
+<h1><%= t("testimonials") %></h1>
+
+<div id="testimonials">
+<% @testimonials.each do |testimonial| %>
+  <div class="testimonial">
+    <blockquote><%= testimonial.description %></blockquote>
+    <span class="name"><%= testimonial.name %></span>
+    <span class="location"><%= testimonial.location %></span>
+  </div>
+<% end %>
+</div>
