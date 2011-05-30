@@ -2,11 +2,11 @@ require 'rubygems'
 require 'rake'
 require 'rake/testtask'
 require 'rake/packagetask'
-require 'rake/gempackagetask'
+require 'rubygems/package_task'
 
 spec = eval(File.read('spree_testimonials.gemspec'))
 
-Rake::GemPackageTask.new(spec) do |p|
+Gem::PackageTask.new(spec) do |p|
   p.gem_spec = spec
 end
 
