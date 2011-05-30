@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_testimonials'
-  s.version     = '3.0.3'
+  s.version     = '3.0.4'
   s.summary     = 'Adds the ability to manage testimonials to a spree site'
   s.description = 'With this gem you get management tools to make it very easy to update your testimonials thru the admin section'
   s.required_ruby_version = '>= 1.8.7'
